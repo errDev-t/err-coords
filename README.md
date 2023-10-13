@@ -30,3 +30,4 @@ press Escape or double click on the header
 - Live previews
 - easy to copy the coords
 
+https://cdn.discordapp.com/attachments/1152381437421568030/1162500678158123220/image.png?ex=653c2a1f&is=6529b51f&hm=be1cace1b18d81d3f0da052b09fa42c533749b1576abfad9ae27a293f541062b&
