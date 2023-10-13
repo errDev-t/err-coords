@@ -30,4 +30,5 @@ press Escape or double click on the header
 - Live previews
 - easy to copy the coords
 
-https://prnt.sc/AzXvY7lFbCOF
+
+![image](https://github.com/errDev-t/err-coords/assets/89361682/8eb5b428-3b18-40c4-a663-6c9532c51ded)
