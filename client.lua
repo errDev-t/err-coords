@@ -19,8 +19,7 @@ RegisterCommand("coord", function(source, args)
             vect4 = vec4,
             vect3 = vec3
         })
-end
-)
+end)
 
 exports("UiOpen", function()
     SetNuiFocus(true, true)
