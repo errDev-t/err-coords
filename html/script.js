@@ -2,40 +2,43 @@
   const Ui = {};
 
   Ui.Open = function (data) {
+    var eventData = event.data;
+    var vec4 = eventData.vect4;
+    var vec3 = eventData.vect3;
+    var vec = eventData.coord;
+    $("#coordsv4").html(`<p>${vec4}</p>`);
+    $("#coordsv3").html(`<p>${vec3}</p>`);
+    $("#coords").html(`<p>${vec}</p>`);
     $("#main-container").fadeIn(150);
   };
-  function closeCoordsMenu() {
+
+  Ui.Close = function () {
     $.post(`https://${GetParentResourceName()}/close`, JSON.stringify({}));
     $("#main-container").fadeOut(150);
-  }
+  };
 
   window.onload = function (e) {
     window.addEventListener("message", function (event) {
       switch (event.data.action) {
         case "open":
           Ui.Open(event.data);
-          var vec4 = event.data.vect4;
-          var vec3 = event.data.vect3;
-          var vec = event.data.coord;
-          $("#coordsv4").html(`<p>${vec4}</p>`);
-          $("#coordsv3").html(`<p>${vec3}</p>`);
-          $("#coords").html(`<p>${vec}</p>`);
-          break;
+        break;
         case "close":
-          closeCoordsMenu();
-          break;
+          Ui.Close();
+        break;
       }
     });
   };
 
   document.onkeyup = function (data) {
     if (data.key == "Escape") {
-      closeCoordsMenu();
+      Ui.Close();
     }
   };
+
   $(document).on("dblclick", ".header", function (e) {
     event.preventDefault();
-    closeCoordsMenu();
+    Ui.Close();
   });
 
   $(document).on("click", "#copy", function (e) {
@@ -45,7 +48,7 @@
     temp.val($("#coords").text()).select();
     document.execCommand("copy");
     temp.remove();
-    closeCoordsMenu();
+    Ui.Close();
   });
 
   $(document).on("click", "#copyv3", function (e) {
@@ -55,7 +58,7 @@
     temp.val($("#coordsv3").text()).select();
     document.execCommand("copy");
     temp.remove();
-    closeCoordsMenu();
+    Ui.Close();
   });
 
   $(document).on("click", "#copyv4", function (e) {
@@ -65,6 +68,7 @@
     temp.val($("#coordsv4").text()).select();
     document.execCommand("copy");
     temp.remove();
-    closeCoordsMenu();
+    Ui.Close();
   });
+
 })();
