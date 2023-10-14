@@ -1,18 +1,8 @@
 
 # Err-coords
 
-
-
-
-## Installation
-
-Install Err-coords
-
-buy putting the files in the resources and ensure it 
- 
-## 🔗 Links
-[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/dBtVfbp2dq)
-
+## small info
+(/coord) to open the Coords menu
 
 
 ## FAQ
@@ -22,6 +12,15 @@ buy putting the files in the resources and ensure it
 No its standalone
 
 #### How to close it ?
+
+## Installation
+
+Install Err-coords
+
+buy putting the files in the resources and ensure it 
+ 
+## 🔗 Links
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/dBtVfbp2dq)
 
 press Escape or double click on the header
 
