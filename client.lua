@@ -1,8 +1,5 @@
+local QBCore = exports['qb-core']:GetCoreObject()
 local IsUiShow = false
-RegisterNUICallback("exit", function()
-    SetNuiFocus(false, false)
-    SendNUIMessage({event = "hide"})
-end)
 
 RegisterCommand("coord", function(source, args)
         SetNuiFocus(true, true)
@@ -19,13 +16,6 @@ RegisterCommand("coord", function(source, args)
             vect4 = vec4,
             vect3 = vec3
         })
-end)
-
-exports("UiOpen", function()
-    SetNuiFocus(true, true)
-    SendNUIMessage({
-        action = "open",
-    })
 end)
 
 RegisterNUICallback("close", function(data)
